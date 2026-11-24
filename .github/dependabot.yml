@@ -1,0 +1,14 @@
+# 依存の更新を月 1 回にまとめる。worker/ に package.json ができたら、npm の項目を足す。
+version: 2
+updates:
+  - package-ecosystem: pub
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      pub-all:
+        patterns: ["*"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
